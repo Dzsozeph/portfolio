@@ -554,7 +554,7 @@ nav a:hover{
   display: flex;
   justify-content: center; /* A tartalmat középre igazítja vízszintesen */
   align-items: center; /* A tartalmat középre igazítja függőlegesen */
-  top:2vh;
+  margin-top: 2vh;
   position: relative;
 }
 .about-box{
@@ -703,6 +703,16 @@ nav a:hover{
 
 }
 
+#moon-scroll {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
 #section-backtodigital {
 	position:relative;
 	width: 100vw;
@@ -809,7 +819,7 @@ nav a:hover{
 
 .computer-icon{ 
 	position: relative;
-	margin-top: 85vh;
+	margin-top: 84vh;
 	left: 48.6%;
 	width: 405px;
 	height: 405px;

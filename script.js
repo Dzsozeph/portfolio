@@ -70,4 +70,10 @@ document.getElementById("moon-scroll").addEventListener("click", function(event)
   });
 });
 
+document.getElementById("mymission-link").addEventListener("click", function(event) {
+  event.preventDefault();
+  document.querySelector("#section-mission").scrollIntoView({
+    behavior: "smooth"
+  });
+});
 
