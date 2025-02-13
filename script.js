@@ -77,3 +77,14 @@ document.getElementById("mymission-link").addEventListener("click", function(eve
   });
 });
 
+
+    document.getElementById("logo-refresh").addEventListener("click", function() {
+        location.reload();
+    });
+
+document.getElementById("works-link").addEventListener("click", function(event) {
+  event.preventDefault();
+  document.querySelector("#section-seo").scrollIntoView({
+    behavior: "smooth"
+  });
+});

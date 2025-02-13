@@ -1,6 +1,38 @@
 @charset "utf-8";
 /* CSS Document */
 
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-300%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes earthquake {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-300%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
 
 .nav-border{
 
@@ -12,6 +44,8 @@
 	height: 10vh;
 
 }
+
+
 
 
 .nav-border::after, .nav-border::before{
@@ -239,11 +273,12 @@ html, body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background:radial-gradient(circle, #0f2027, #203a43, #2c5364); /* A sáv csúszó részének színe */
+background: rgb(4,43,24);
+background: linear-gradient(14deg, rgba(4,43,24,1) 0%, rgba(48,189,96,1) 40%, rgba(189,217,199,1) 58%, rgba(48,189,96,1) 96%);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
+    background: #001003;
 }
 
 .section-welcome-background{
@@ -508,6 +543,7 @@ nav a:hover{
 	font-size: 70px;
 	color: white;
 	text-shadow: 10px 10px 10px black;
+	animation: slideInFromTop 2s ease-out forwards;
 	}
 
 
@@ -519,7 +555,7 @@ nav a:hover{
 	position: absolute;
 	margin-top: 15vh;
 	text-shadow: 10px 10px 10px black;
-	
+	animation: slideInFromLeft 1.6s ease-out forwards;
 	}
 @media (max-width: 700px) {
 	.welcome-box p1{
@@ -545,7 +581,13 @@ nav a:hover{
     padding: 0;
     cursor: pointer;
 	z-index: 4;
+	clip-path: inherit; /* Ugyanaz a clip-path */
 
+}
+
+
+.scrolldownbtn-box:hover{
+	box-shadow: 0 0 40px white;
 }
 
 #section-about {
@@ -1290,9 +1332,10 @@ h2 {
     position:absolute;
 	width: 100vw;
 	height: 100vh;
-    margin-top: 86vh;
-
-	background-size: cover;
+    margin-top:-30vh;
+    background-image: url("cyber.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
 	
 
 	
@@ -1547,10 +1590,12 @@ h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 	z-index:100;
+	animation: earthquake 2s infinite;
+	box-shadow: 0 0 40px white;
 }
 
 .chat-bubble:hover {
-    transform: scale(1.2);
+    box-shadow: 0 0 70px white;
 }
 
 /* Chat ablak stílus (alapból rejtve) */
