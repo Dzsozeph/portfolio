@@ -521,9 +521,9 @@ nav a:hover{
 
 .face{
 	position:absolute;
+	top: 1vh;
 	width: 43vw;
 	height: 100%;
-	
 	right: -4vw;
 	background-image: url(boy3.png);
 	background-size:cover;

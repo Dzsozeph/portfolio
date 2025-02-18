@@ -88,3 +88,8 @@ document.getElementById("works-link").addEventListener("click", function(event) 
     behavior: "smooth"
   });
 });
+
+
+window.addEventListener('wheel', function(event) {
+    event.preventDefault();
+}, { passive: false });
